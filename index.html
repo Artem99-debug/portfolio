@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madrid Trip</title>
+    <title>Viagem Madrid</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,7 +49,7 @@
 </head>
 <body>
     <div class="countdown">
-        <h1>Madrid Trip</h1>
+        <h1>Viagem Madrid</h1>
         <div id="timer">
             <div id="days"></div>
             <div id="hours"></div>
@@ -59,7 +59,7 @@
     </div>
     <canvas id="fireworks"></canvas>
     <script>
-        var tripDate = new Date("2024-05-24T14:35:00").getTime();
+        var tripDate = new Date("2024-05-24T18:00:00").getTime();
 
         var countdownFunction = setInterval(function() {
             var now = new Date().getTime();
@@ -77,7 +77,7 @@
 
             if (distance < 0) {
                 clearInterval(countdownFunction);
-                document.getElementById("timer").innerHTML = "Enjoy your trip to Madrid!";
+                document.getElementById("timer").innerHTML = "Toca a meter-te no caralho, está na hora!";
                 startFireworks();
             }
         }, 1000);
