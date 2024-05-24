@@ -43,6 +43,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
+            display: none;
         }
     </style>
 </head>
@@ -58,7 +59,7 @@
     </div>
     <canvas id="fireworks"></canvas>
     <script>
-        var tripDate = new Date("2024-05-24T14:32:00").getTime();
+        var tripDate = new Date("2024-05-24T14:35:00").getTime();
 
         var countdownFunction = setInterval(function() {
             var now = new Date().getTime();
@@ -77,8 +78,7 @@
             if (distance < 0) {
                 clearInterval(countdownFunction);
                 document.getElementById("timer").innerHTML = "Enjoy your trip to Madrid!";
-                // Uncomment the line below if you want fireworks to start only after the countdown ends
-                // startFireworks();
+                startFireworks();
             }
         }, 1000);
 
@@ -128,8 +128,6 @@
 
             animate();
         }
-
-        startFireworks(); // Start fireworks immediately
     </script>
 </body>
 </html>
