@@ -12,7 +12,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: url('https://wallpapers.com/images/hd/vintage-madrid-golden-sunset-muafyzw5i4jba4m5.jpg') no-repeat center center fixed;
+            background: url('https://example.com/madrid.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
         }
@@ -30,6 +30,11 @@
         .countdown div {
             font-size: 2em;
             margin: 10px 0;
+        }
+        #timer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
         }
         #fireworks {
             position: absolute;
@@ -54,7 +59,7 @@
     </div>
     <canvas id="fireworks"></canvas>
     <script>
-        var tripDate = new Date("2024-05-24T14:28:00").getTime();
+        var tripDate = new Date("2024-05-25T18:00:00").getTime();
 
         var countdownFunction = setInterval(function() {
             var now = new Date().getTime();
@@ -65,10 +70,10 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("days").innerHTML = days + "d ";
-            document.getElementById("hours").innerHTML = hours + "h ";
-            document.getElementById("minutes").innerHTML = minutes + "m ";
-            document.getElementById("seconds").innerHTML = seconds + "s ";
+            document.getElementById("days").innerHTML = days + "d";
+            document.getElementById("hours").innerHTML = hours + "h";
+            document.getElementById("minutes").innerHTML = minutes + "m";
+            document.getElementById("seconds").innerHTML = seconds + "s";
 
             if (distance < 0) {
                 clearInterval(countdownFunction);
